@@ -44,7 +44,7 @@ const COMPANY_STATS = [
 export default function AboutPage() {
   return (
     <Layout>
-      <section className="pt-28 pb-20 bg-gradient-to-b from-cine-black to-cine-gray-700 min-h-screen">
+      <section className="pt-28 pb-20 bg-gradient-to-b from-cine-black to-cine-gray-700 min-h-screen about-page-animation">
         <div className="container mx-auto px-6">
           {/* Hero Section */}
           <div className="flex flex-col md:flex-row gap-10 items-center mb-16">
@@ -58,7 +58,7 @@ export default function AboutPage() {
                 We combine technical expertise with creative vision to deliver premium video content that exceeds expectations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Link href="/#portfolio" className="px-6 py-3 bg-cine-gold text-cine-black rounded-md font-medium hover:bg-white transition-colors">
+                <Link href="/portfolio" className="px-6 py-3 bg-cine-gold text-cine-black rounded-md font-medium hover:bg-white transition-colors">
                   View Our Work
                 </Link>
                 <Link href="/service-customizer" className="flex items-center px-6 py-3 border border-cine-gold text-cine-gold rounded-md font-medium hover:bg-cine-gold hover:text-cine-black transition-colors">

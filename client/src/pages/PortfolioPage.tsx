@@ -80,7 +80,7 @@ export default function PortfolioPage() {
 
   return (
     <Layout>
-      <section className="pt-28 pb-20 bg-gradient-to-b from-cine-black to-cine-gray-700 min-h-screen">
+      <section className="pt-28 pb-20 bg-gradient-to-b from-cine-black to-cine-gray-700 min-h-screen portfolio-page-animation">
         <div className="container mx-auto px-6">
           {/* Hero Section */}
           <div className="text-center mb-12">
