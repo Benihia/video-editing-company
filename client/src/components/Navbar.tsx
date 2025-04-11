@@ -69,13 +69,13 @@ export default function Navbar() {
                 )}>
                   Services
                 </Link>
-                <Link href="/#portfolio" className={cn(
+                <Link href="/portfolio" className={cn(
                   "relative px-5 py-2 text-sm font-medium rounded-full transition-all duration-300",
                   activeItem === '/portfolio' ? "text-cine-black" : "text-white hover:text-cine-gold"
                 )}>
                   Portfolio
                 </Link>
-                <Link href="/#about" className={cn(
+                <Link href="/about" className={cn(
                   "relative px-5 py-2 text-sm font-medium rounded-full transition-all duration-300",
                   activeItem === '/about' ? "text-cine-black" : "text-white hover:text-cine-gold"
                 )}>
@@ -131,12 +131,12 @@ export default function Navbar() {
             <span>Services</span>
             <ChevronRight className="w-4 h-4 ml-auto" />
           </Link>
-          <Link href="/#portfolio" className="flex items-center px-4 py-3 text-base font-medium text-white hover:text-cine-gold rounded-md">
+          <Link href="/portfolio" className="flex items-center px-4 py-3 text-base font-medium text-white hover:text-cine-gold rounded-md">
             <PlayCircle className="w-5 h-5 mr-3 text-cine-gold" />
             <span>Portfolio</span>
             <ChevronRight className="w-4 h-4 ml-auto" />
           </Link>
-          <Link href="/#about" className="flex items-center px-4 py-3 text-base font-medium text-white hover:text-cine-gold rounded-md">
+          <Link href="/about" className="flex items-center px-4 py-3 text-base font-medium text-white hover:text-cine-gold rounded-md">
             <User className="w-5 h-5 mr-3 text-cine-gold" />
             <span>About</span>
             <ChevronRight className="w-4 h-4 ml-auto" />

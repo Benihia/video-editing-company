@@ -8,6 +8,8 @@ import ServiceCustomizer from "@/pages/ServiceCustomizer";
 import Checkout from "@/pages/Checkout";
 import OrderConfirmation from "@/pages/OrderConfirmation";
 import AdminDashboard from "@/pages/AdminDashboard";
+import AboutPage from "@/pages/AboutPage";
+import PortfolioPage from "@/pages/PortfolioPage";
 
 function Router() {
   return (
@@ -17,6 +19,8 @@ function Router() {
       <Route path="/checkout" component={Checkout} />
       <Route path="/confirmation" component={OrderConfirmation} />
       <Route path="/admin" component={AdminDashboard} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/portfolio" component={PortfolioPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
