@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 97%;
+    
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 97%;
+    
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 97%;
+    
+    --primary: 36 50% 59%;
+    --primary-foreground: 0 0% 4%;
+    
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 97%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 36 50% 59%;
+    --accent-foreground: 0 0% 4%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 97%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 36 50% 59%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sf-pro antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .font-sf-pro {
+    font-family: 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  }
+  
+  .glassmorphism {
+    @apply bg-secondary/70 backdrop-blur-md border border-white/10;
+  }
+  
+  .page {
+    @apply transition-opacity duration-500;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-cine-black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cine-gray-700 rounded-sm;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cine-gold;
+  }
+  
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
