@@ -38,11 +38,9 @@ export default function HomePage() {
               Premium video editing services crafted to transform your footage into cinematic masterpieces.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/service-customizer">
-                <a className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-cine-black bg-cine-gold hover:bg-opacity-90 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cine-gold">
-                  Customize Your Video
-                  <ArrowRight className="ml-2 -mr-1 w-5 h-5" />
-                </a>
+              <Link href="/service-customizer" className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-cine-black bg-cine-gold hover:bg-opacity-90 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cine-gold">
+                Customize Your Video
+                <ArrowRight className="ml-2 -mr-1 w-5 h-5" />
               </Link>
               <a href="#portfolio" className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-cine-white border border-cine-white hover:bg-cine-white hover:bg-opacity-10 transition-all">
                 View Our Work
@@ -97,10 +95,8 @@ export default function HomePage() {
           </div>
           
           <div className="text-center mt-16">
-            <Link href="/service-customizer">
-              <a className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-cine-black bg-cine-gold hover:bg-opacity-90 transition-all transform hover:scale-105">
-                Start Your Custom Project
-              </a>
+            <Link href="/service-customizer" className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-cine-black bg-cine-gold hover:bg-opacity-90 transition-all transform hover:scale-105">
+              Start Your Custom Project
             </Link>
           </div>
         </div>
@@ -165,11 +161,9 @@ export default function HomePage() {
             <p className="text-xl text-cine-gray-100 mb-10">
               Let's create something extraordinary together. Start with our custom video service builder and bring your vision to life.
             </p>
-            <Link href="/service-customizer">
-              <a className="inline-flex items-center justify-center px-8 py-4 text-xl font-medium rounded-md text-cine-black bg-cine-gold hover:bg-opacity-90 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cine-gold">
-                Start Your Project
-                <ArrowRight className="ml-2 -mr-1 w-5 h-5" />
-              </a>
+            <Link href="/service-customizer" className="inline-flex items-center justify-center px-8 py-4 text-xl font-medium rounded-md text-cine-black bg-cine-gold hover:bg-opacity-90 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cine-gold">
+              Start Your Project
+              <ArrowRight className="ml-2 -mr-1 w-5 h-5" />
             </Link>
           </div>
         </div>

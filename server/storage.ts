@@ -47,14 +47,25 @@ export class MemStorage implements IStorage {
     const timestamp = new Date();
     const orderRef = `CW-${timestamp.getFullYear()}-${nanoid(6).toUpperCase()}`;
     
+    // Convert features to proper string array using map if needed
+    const featuresArray: string[] = Array.isArray(insertOrder.features) ? 
+      insertOrder.features.map(feature => String(feature)) : [];
+    
+    // Create the order with typed features
     const order: Order = { 
-      ...insertOrder, 
-      id, 
-      createdAt: timestamp, 
-      orderRef,
+      id,
+      name: insertOrder.name,
+      email: insertOrder.email,
+      phone: insertOrder.phone,
       company: insertOrder.company || null,
+      videoType: insertOrder.videoType,
+      videoLength: insertOrder.videoLength,
+      features: featuresArray,
       fileLink: insertOrder.fileLink || null,
-      notes: insertOrder.notes || null
+      notes: insertOrder.notes || null,
+      totalPrice: insertOrder.totalPrice,
+      createdAt: timestamp, 
+      orderRef
     };
     
     this.orders.set(id, order);
