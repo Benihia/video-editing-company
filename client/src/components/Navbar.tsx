@@ -23,6 +23,8 @@ export default function Navbar() {
     // Update active item based on current location
     if (location === '/') setActiveItem('/');
     else if (location.includes('service-customizer')) setActiveItem('/service-customizer');
+    else if (location.includes('portfolio')) setActiveItem('/portfolio');
+    else if (location.includes('about')) setActiveItem('/about');
     else if (location.includes('checkout')) setActiveItem('/checkout');
     else if (location.includes('admin')) setActiveItem('/admin');
   }, [location]);
@@ -38,9 +40,9 @@ export default function Navbar() {
         ? "py-2 bg-cine-black/80 backdrop-blur-md shadow-lg" 
         : "py-4 bg-transparent"
     )}>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-6xl">
         <div className="flex justify-between items-center">
-          <Link href="/" className="group flex items-center">
+          <Link href="/" className="group flex items-center z-10">
             <div className="relative overflow-hidden mr-3">
               <Logo 
                 className="text-cine-gold transform transition-all duration-500 group-hover:scale-110" 
@@ -54,8 +56,9 @@ export default function Navbar() {
             </div>
           </Link>
           
-          <div className="hidden md:flex items-center">
-            <div className="relative px-1 py-1 mr-4 bg-cine-gray-700/50 rounded-full backdrop-blur-sm">
+          {/* Center Navigation */}
+          <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div className="relative px-1 py-1 bg-cine-gray-700/50 rounded-full backdrop-blur-sm">
               <div className="flex relative z-10">
                 <Link href="/" className={cn(
                   "relative px-5 py-2 text-sm font-medium rounded-full transition-all duration-300",
@@ -85,14 +88,18 @@ export default function Navbar() {
               
               {/* Animated background for active item */}
               <div className={cn(
-                "absolute top-1 h-8 rounded-full bg-cine-gold transition-all duration-300 ease-out",
+                "absolute top-1 h-8 rounded-full bg-cine-gold transition-all duration-500 ease-out",
                 activeItem === '/' ? "left-1 w-20" : 
                 activeItem === '/service-customizer' ? "left-[5.25rem] w-24" : 
                 activeItem === '/portfolio' ? "left-[10.25rem] w-24" : 
-                activeItem === '/about' ? "left-[15.25rem] w-20" : ""
+                activeItem === '/about' ? "left-[15.25rem] w-20" : "",
+                "transform-gpu"
               )}></div>
             </div>
-            
+          </div>
+          
+          {/* Right side - CTA button */}
+          <div className="hidden md:flex items-center z-10">
             <Link href="/service-customizer" className="flex items-center gap-1.5 px-5 py-2.5 text-cine-black bg-cine-gold rounded-full font-medium transition-all hover:bg-white hover:shadow-glow">
               <Plus size={16} />
               <span>Start a Project</span>
