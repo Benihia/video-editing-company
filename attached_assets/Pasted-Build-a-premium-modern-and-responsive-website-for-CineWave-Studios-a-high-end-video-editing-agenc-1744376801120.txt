@@ -1,0 +1,68 @@
+Build a premium, modern, and responsive website for CineWave Studios, a high-end video editing agency.
+The website should follow the Apple design language — minimal, spacious, and elegant with smooth animations and bold typography.
+Use HTML, CSS, and JavaScript for the frontend, and Node.js + Express + SQLite for the backend/database.
+
+🔥 Pages & Features:
+1. Homepage
+
+Cinematic fullscreen hero section with dark gradient overlay
+
+Logo and top nav bar (sticky on scroll)
+
+Headline: “Elevate Your Story with CineWave Studios”
+
+CTA button: “Customize Your Video” → links to service builder
+
+Use large font sizes, wide spacing, and soft transitions
+
+2. Service Customizer Page
+
+Sleek form styled like an Apple configurator (MacBook/iPhone style)
+
+Let users build their custom order:
+
+Video Type (YouTube, Ad, Event, Short Film, etc.)
+
+Video Length (Dropdown with pricing tiers)
+
+Toggle switches for features (Color Grading, Transitions, Subtitles, SFX, VFX, Voice-over, etc.)
+
+File upload or link input (Google Drive, Dropbox, or URL)
+
+Notes/instructions field
+
+Show live preview of the order summary and auto-calculated pricing
+
+Use glassmorphism, soft shadows, and fade-in animations
+
+3. Checkout Page
+
+Display all selections in a clean summary layout
+
+Inputs for name, email, phone number, and notes
+
+“Submit Order” button that sends data to backend
+
+(Optional: Add payment method selection or placeholder)
+
+4. Backend (Node.js + Express + SQLite)
+
+Store all client orders, preferences, prices, and contact info
+
+Optional admin route: /admin to view orders in a simple dashboard
+
+🧠 Tech Requirements:
+Use express, sqlite3, multer (for file upload), nodemailer (optional)
+
+Store orders in database.db with timestamp, pricing, and features selected
+
+🎨 Design System:
+Color palette: Deep black (#0a0a0a), soft white (#f7f7f7), gold accent (#caa265)
+
+Font: Use SF Pro Display (self-hosted or CDN)
+
+Animations: Subtle fade-ins, scale-on-hover, parallax effects
+
+Layout: Full-width sections, centered content, large padding
+
+Navigation bar and footer inspired by Apple’s layout
